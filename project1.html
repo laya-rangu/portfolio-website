@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | Breast Cancer Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Laya Rangu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">EXPERIENCE</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  <main class="case-study-page">
+    <div class="case-study-header container-fluid">
+      <h1 class="mb-1">Breast Cancer Detection with Deep Learning</h1>
+      <p class="lead text-light">A detailed comparative analysis of Convolutional Neural Networks (CNNs) and Vision Transformers (ViT) for mammography image classification.</p>
+      <p class="mt-4"><a href="#results" class="project-code-link text-light">Jump to Key Results</a></p>
+    </div>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Problem Statement</h2>
+      <p>Accurate and timely diagnosis of breast cancer from mammography images is critical, but often hindered by the sheer volume of data and the presence of severe class imbalance (many negative cases, fewer positive cases) in diagnostic datasets. We sought a robust solution that minimizes false negatives.</p>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Aim and Strategic Approach</h2>
+      <p>The primary aim was to build a highly sensitive binary classifier to distinguish between positive and negative cancer cases. We focused on a systematic comparison between classical CNN models and modern Transformer architectures to find the best fit for complex medical image features.</p>
+      <ul class="list-unstyled">
+        <li class="list-point">Model Comparison: Evaluated seven pre-trained models, including VGG-19, ResNet-50, and Vision Transformers (CAIT, ViT).</li>
+        <li class="list-point">Performance Metrics: Prioritized Recall and F1-score to ensure clinical relevance by reducing the false negative rate.</li>
+      </ul>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Dataset and Pre-processing</h2>
+      <p>The RSNA Screening Mammography Breast Cancer Detection dataset (over 54,713 images) was used. The pipeline focused heavily on mitigating class imbalance:</p>
+      <ul class="list-unstyled">
+        <li class="list-point">Data Balancing: Used the Structural Similarity Index Measure (SSIM) to intelligently filter out redundant negative images, achieving a balanced dataset while preserving information density.</li>
+        <li class="list-point">Standardization: Images were resized to 224 times 224 pixels and normalized to fit standard deep learning model requirements.</li>
+      </ul>
+    </section>
+    
+    <section class="case-study-section">
+      <h2 class="section-title">Proposed Work and Comparative Analysis</h2>
+      <p>All models were fine-tuned over 100 epochs using the Adam Optimizer and Cross-Entropy Loss. The study compared model stability and feature extraction effectiveness on the balanced mammography scans.</p>
+      <div class="row mt-4 g-4">
+        <!-- Card 1: CNN Performance Highlights -->
+        <div class="col-md-6">
+          <div class="card p-4 h-100"> 
+            <h4>CNN Performance Highlights</h4>
+            <p>VGG-19 demonstrated the most robust and stable training among all CNN models, providing a strong baseline for the task.</p>
+            <ul class="list-unstyled">
+              <li class="list-point">Best F1-score: 0.5736 (VGG-19)</li>
+              <li class="list-point">Best Recall: 0.6667 (VGG-19)</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 2: Vision Transformer Performance Highlights -->
+        <div class="col-md-6">
+          <div class="card p-4 h-100">
+            <h4>Vision Transformer Performance Highlights</h4>
+            <p>The attention mechanisms in the Transformer architecture proved superior at capturing long-range spatial dependencies across the images.</p>
+            <ul class="list-unstyled">
+              <li class="list-point">Highest F1-score: 0.6085 (CAIT)</li>
+              <li class="list-point">Highest Recall: 0.7600 (CAIT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="case-study-section" id="results">
+      <h2 class="section-title">Conclusion and Key Results</h2>
+      <p>The comparative study successfully identified the CAIT Transformer as the optimal model. Its superior performance in Recall (sensitivity) is paramount in a medical context, where minimizing the risk of missing a cancer case is the primary objective.</p>
+      <p class="lead text-primary fw-bold">Outcome: Successfully implemented a CAIT-based model that achieved a 76% Recall rate on the test set, demonstrating the high potential of Transformers for complex, high-stakes image classification tasks.</p>
+    </section>
+    
+    <section class="case-study-section text-center">
+      <h2 class="section-title">Project Links</h2>
+      <a href="https://github.com/laya-rangu/Breast-Cancer-Detection" target="_blank" class="project-code-link">
+        View Project Code on GitHub
+      </a>
+      <div class="mt-4">
+        <a href="project2.html" class="btn btn-secondary me-3">Next Project (E-commerce)</a>
+        <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

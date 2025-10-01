@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | Cloud Optimization</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Laya Rangu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">EXPERIENCE</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  <main class="case-study-page">
+    <div class="case-study-header container-fluid">
+      <h1 class="mb-1">Cloud Resource Optimization and RBAC Streamlining</h1>
+      <p class="lead text-light">Improving efficiency and governance in large-scale Azure cloud environments at PepsiCo GBS through automation.</p>
+      <p class="mt-4"><a href="#results" class="project-code-link text-light">Jump to Impact Metrics</a></p>
+    </div>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Problem Statement</h2>
+      <p>The enterprise Azure environment suffered from resource sprawl and complex, inherited Role-Based Access Control (RBAC) assignments. This led to deployment failures due to excessive RBAC entries exceeding cloud scope limits, necessitating a complex manual cleanup process.</p>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Aim and Proposed Work</h2>
+      <p>The goal was to introduce automated governance to streamline RBAC permissions, resolve critical deployment errors, and significantly boost the cloud operations team's efficiency without manual intervention.</p>
+      <ul class="list-unstyled">
+        <li class="list-point">Solution: Developed non-disruptive, advanced PowerShell scripts to audit Azure subscriptions.</li>
+        <li class="list-point">Automation Goal: Programmatically identify and remove stale or redundant role assignments in a controlled manner.</li>
+      </ul>
+    </section>
+    
+    <section class="case-study-section">
+      <h2 class="section-title">Key Technical Details</h2>
+      <ul class="list-unstyled">
+        <li class="list-point">RBAC Cleanup: The PowerShell scripts effectively cleaned the inherited access structure, which resolved critical scope limit issues and accelerated user onboarding and resource deployment.</li>
+        <li class="list-point">DevOps Integration: Integrated the automated processes with Jenkins and Terraform to establish Continuous Integration/Continuous Deployment (CI/CD) pipelines, ensuring future deployments adhered to governance policies from the start.</li>
+      </ul>
+    </section>
+
+    <section class="case-study-section" id="results">
+      <h2 class="section-title">Impact and Key Results</h2>
+      <p>The automation project delivered significant, measurable benefits across the cloud operations team, establishing a clean and scalable governance model.</p>
+      <div class="card p-4">
+        <h5 class="text-center" style="color: var(--color-primary);">Operational Efficiency Gains</h5>
+        <ul class="list-unstyled">
+          <li class="list-point">Efficiency Boost: Increased team efficiency in access management by 20%, freeing up engineering hours for higher-value tasks.</li>
+          <li class="list-point">Critical Issue Resolution: Permanently resolved major Azure scope limit errors that were previously blocking mission-critical deployments.</li>
+          <li class="list-point">Improved Governance: Established a clean, scalable RBAC governance model for future cloud expansion.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="case-study-section text-center">
+      <h2 class="section-title">Project Links</h2>
+      <a href="#" target="_blank" class="project-code-link">
+        View Project Documentation (Internal/Private)
+      </a>
+      <p class="text-muted mt-2">Note: Repository links are private due to proprietary enterprise code.</p>
+      <div class="mt-4">
+        <a href="project2.html" class="btn btn-secondary me-3">Previous Project</a>
+        <a href="project4.html" class="btn btn-secondary me-3">Next Project</a>
+        <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

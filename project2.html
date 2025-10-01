@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | E-commerce Price Comparison</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Laya Rangu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">EXPERIENCE</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  <main class="case-study-page">
+    <div class="case-study-header container-fluid">
+      <h1 class="mb-1">E-commerce Price Comparison Website</h1>
+      <p class="lead text-light">A secure and scalable full-stack MERN application for real-time market price aggregation and comparison.</p>
+      <p class="mt-4"><a href="#results" class="project-code-link text-light">Jump to Key Results</a></p>
+    </div>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Problem Statement</h2>
+      <p>Consumers often waste time manually checking multiple vendor websites to find the best price for a product. The challenge was to create a centralized, fast, and accurate platform to aggregate and compare real-time e-commerce pricing data securely and efficiently.</p>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Aim and Technical Stack</h2>
+      <p>The aim was to develop a high-performance, full-stack application capable of handling high traffic and data-intensive operations. The MERN Stack (MongoDB, Express.js, React.js, Node.js) was chosen for its unified JavaScript environment and scalability.</p>
+      <div class="row mt-4 g-4">
+        <div class="col-md-6">
+          <div class="card p-4 h-100">
+            <h4>Frontend Development (React.js)</h4>
+            <ul class="list-unstyled">
+              <li class="list-point">Built a responsive, modern Single Page Application (SPA) focusing on an intuitive user experience for price comparison.</li>
+              <li class="list-point">Used state management to handle dynamic, asynchronous price updates without requiring full page reloads.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-4 h-100">
+            <h4>Backend and Data (Node.js/Express/MongoDB)</h4>
+            <ul class="list-unstyled">
+              <li class="list-point">Implemented a comprehensive set of secure RESTful APIs for data retrieval, search, and user authentication.</li>
+              <li class="list-point">Designed a MongoDB schema optimized for fast reads and complex aggregation necessary for price indexing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Proposed Work and Optimizations</h2>
+      <p>Critical focus was placed on optimizing query speeds and system security to ensure the platform could handle real-time market data reliably.</p>
+      <ul class="list-unstyled">
+        <li class="list-point">Query Performance: Strategically applied indexing techniques (e.g., compound indexes) to MongoDB collections, significantly reducing data retrieval latency.</li>
+        <li class="list-point">API Security: Implemented robust security measures, including JWT (JSON Web Token) authentication and thorough input validation to protect against common attacks.</li>
+        <li class="list-point">Data Aggregation: Designed reliable backend processes for periodic data synchronization, maintaining accurate and current price comparisons against external vendor sources.</li>
+      </ul>
+    </section>
+    
+    <section class="case-study-section" id="results">
+      <h2 class="section-title">Key Achievements and Results</h2>
+      <p>This project successfully demonstrates full-stack proficiency, performance optimization, and robust security implementation in a data-intensive environment.</p>
+      <p class="lead text-primary fw-bold">Outcome: Delivered a fast, scalable, and secure price comparison platform. Achieved a 30% reduction in average data retrieval latency through advanced database and application optimization.</p>
+    </section>
+    
+    <section class="case-study-section text-center">
+      <h2 class="section-title">Project Links</h2>
+      <a href="https://github.com/Priya0111/Ecommerce" target="_blank" class="project-code-link">
+        View E-commerce Code on GitHub
+      </a>
+      <div class="mt-4">
+        <a href="project1.html" class="btn btn-secondary me-3">Previous Project</a>
+        <a href="project3.html" class="btn btn-secondary me-3">Next Project</a>
+        <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

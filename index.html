@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laya Rangu | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Laya Rangu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">EXPERIENCE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section id="home" class="container-fluid py-5">
+    <div class="container card">
+      <div class="row align-items-center">
+        <div class="col-md-7 intro-text">
+          <h2 class="fw-bold">Hi, I'm Laya Rangu 👋</h2>
+          <p class="lead">
+            I am a Master’s student in Computer Science at the University of Massachusetts Lowell, specializing 
+            in Artificial Intelligence, Cloud Computing, and Software Engineering. My focus is on creating 
+            scalable solutions with tangible real-world impact.
+          </p>
+          <div class="mt-4">
+            <a href="#projects" class="btn btn-primary me-3">VIEW PROJECTS</a>
+            <a href="contact.html" class="btn btn-secondary">GET IN TOUCH</a>
+          </div>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="images/profile.jpeg" 
+               alt="Laya Rangu Profile" 
+               class="img-fluid shadow rounded-lg" style="border-radius: 0.75rem !important;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container py-5">
+    <div class="row align-items-start">
+      <div class="col-md-5 order-md-1">
+        <h2 class="section-title">A Quick Background</h2>
+        </div>
+      <div class="col-md-7 order-md-2">
+        <p>
+          My technical journey began with a strong undergraduate focus in Computer Science, where I cultivated foundational skills in software development and data structures. I am currently pursuing a Master's degree, allowing me to dive deep into **Artificial Intelligence, Machine Learning, and Cloud Computing (Azure)**. I have hands-on experience in building and optimizing enterprise-level cloud infrastructure, demonstrated by my work at PepsiCo GBS, and academic rigor in developing advanced deep learning models for complex problems like medical diagnostics. I possess strong full-stack proficiency (MERN) and robust analytical capabilities, and I am eager to apply my skills to challenging and impactful projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="projects" class="container py-5">
+    <h2 class="text-center mb-5 section-title mx-auto">FEATURED WORK</h2>
+
+    <div class="row project-item">
+      <div class="col-md-6">
+        <div class="project-image-container">
+          <img src="images/project1.jpg" alt="AI in Healthcare Project Image" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center pt-4 pt-md-0">
+        <h3>Breast Cancer Detection with Deep Learning</h3>
+        <p>
+          Developed a comprehensive comparative analysis using state-of-the-art Convolutional Neural Networks (VGG-19) and Vision Transformer (CAIT) models, resulting in superior F1-scores. Successfully implemented SSIM-based techniques to mitigate dataset imbalance in critical mammography images.
+        </p>
+        <a href="project1.html" class="btn btn-outline-primary align-self-start">View Case Study</a>
+      </div>
+    </div>
+
+    <div class="row project-item">
+      <div class="col-md-6 order-md-2">
+        <div class="project-image-container">
+          <img src="images/project2.webp" alt="E-commerce Project Image" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center order-md-1 pt-4 pt-md-0">
+        <h3>E-commerce Price Comparison Website</h3>
+        <p>
+          Engineered a responsive MERN stack application featuring secure RESTful APIs and advanced MongoDB indexing. Optimized database query performance by 30% for real-time price tracking across multiple sources, ensuring a fast and scalable platform.
+        </p>
+        <a href="project2.html" class="btn btn-outline-primary align-self-start">View Case Study</a>
+      </div>
+    </div>
+    
+    <div class="row project-item">
+      <div class="col-md-6">
+        <div class="project-image-container">
+          <img src="images/project3.webp" alt="Azure Automation Project Image" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center pt-4 pt-md-0">
+        <h3>Cloud Resource Optimization (Azure/RBAC)</h3>
+        <p>
+          Executed critical cloud governance work at PepsiCo GBS. Developed PowerShell automation scripts to streamline Role-Based Access Control (RBAC) in Azure, leading to a 20% increase in access management efficiency and resolving deployment scope limits that blocked new infrastructure deployments.
+        </p>
+        <a href="project3.html" class="btn btn-outline-primary align-self-start">View Case Study</a>
+      </div>
+    </div>
+
+    <div class="row project-item">
+      <div class="col-md-6 order-md-2">
+        <div class="project-image-container">
+          <img src="images/project4.webp" alt="Image Colorization Project Image" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center order-md-1 pt-4 pt-md-0">
+        <h3>Image Colorization using Deep Learning</h3>
+        <p>
+          Developed an end-to-end image processing solution using Python, OpenCV, and pre-trained Caffe models. The solution utilizes the LAB color space for accurate chrominance prediction, transforming black and white inputs into high-quality, photorealistic color images.
+        </p>
+        <a href="project4.html" class="btn btn-outline-primary align-self-start">View Case Study</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="container-fluid contact-cta text-center">
+    <div class="container">
+      <div class="card p-5">
+        <h2 class="section-title text-center mx-auto">Please Reach Out!</h2>
+        <p class="lead mb-4">I'm actively seeking opportunities in Software Engineering and AI/ML. Let's discuss potential collaborations or roles.</p>
+        
+        <div class="row justify-content-center g-4">
+          <div class="col-md-4">
+            <a href="mailto:rangulaya@gmail.com" class="contact-link-card">
+              <i class="fas fa-envelope"></i>
+              <h5 class="mb-1 fw-bold">Email</h5>
+              <p class="m-0">rangulaya@gmail.com</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.linkedin.com/in/rangu-laya-98a140225/" target="_blank" class="contact-link-card">
+              <i class="fab fa-linkedin"></i>
+              <h5 class="mb-1 fw-bold">LinkedIn</h5>
+              <p class="m-0">Connect Professionally</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

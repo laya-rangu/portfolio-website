@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | Image Colorization</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Laya Rangu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">EXPERIENCE</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  <main class="case-study-page">
+    <div class="case-study-header container-fluid">
+      <h1 class="mb-1">Deep Learning-Based Image Colorization</h1>
+      <p class="lead text-light">An engineering solution using neural networks, Caffe models, and OpenCV to transform grayscale images into photorealistic color.</p>
+      <p class="mt-4"><a href="#results" class="project-code-link text-light">Jump to Key Results</a></p>
+    </div>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Problem Statement</h2>
+      <p>Transforming old or archival black and white images into photorealistic color is a complex problem, as the system must accurately "guess" the original chrominance (color) information based only on the image's luminance (brightness) structure.</p>
+    </section>
+
+    <section class="case-study-section">
+      <h2 class="section-title">Aim and Engineering Approach</h2>
+      <p>The project aimed to deliver a high-quality, automated image colorization solution. The approach focused on using a deep learning model to predict color channels separately from image structure.</p>
+      <ul class="list-unstyled">
+        <li class="list-point">Chrominance Prediction: Utilized pre-trained deep learning models to predict the two color channels (A and B) based on the input grayscale image.</li>
+        <li class="list-point">Robust Pipeline: Built a reliable image processing pipeline using Python and OpenCV to manage transformations and final color integration.</li>
+      </ul>
+    </section>
+
+    <section class="case-study-section" id="labspace">
+      <h2 class="section-title">Proposed Work: LAB Color Space and Neural Inference</h2>
+      <p>The core technical solution lies in utilizing the LAB color space, which is perceptually uniform and isolates luminosity from color information. This greatly simplifies the model's prediction task.</p>
+      <ul class="list-unstyled">
+        <li class="list-point">LAB Color Space Transformation: The input grayscale image is used directly as the Luminance (L) channel. The deep learning model is exclusively trained to predict the Chrominance (A and B) layers.</li>
+        <li class="list-point">Deep Learning Model: The solution leverages a pre-trained colorization network based on the Caffe framework and executed via Python and OpenCV's deep learning module.</li>
+        <li class="list-point">Color Integration: The predicted A and B channels are combined with the original L channel to form the final LAB image, which is then converted back to RGB for display.</li>
+      </ul>
+    </section>
+    
+    <section class="case-study-section" id="results">
+      <h2 class="section-title">Conclusion and Key Results</h2>
+      <p>The project successfully demonstrated proficiency in applying advanced deep learning techniques to a creative image processing challenge. The smart use of the LAB color space provided the necessary control for stable and visually superior outputs.</p>
+      <p class="lead text-primary fw-bold">Outcome: Developed a robust, efficient pipeline that transforms black and white inputs into high-quality, photorealistic color images using neural network inference and smart color space utilization.</p>
+    </section>
+    
+    <section class="case-study-section text-center">
+      <h2 class="section-title">Project Links</h2>
+      <a href="https://github.com/laya-rangu/Coloring-Black-white-Images" target="_blank" class="project-code-link">
+        View Project Code on GitHub
+      </a>
+      <div class="mt-4">
+        <a href="project3.html" class="btn btn-secondary me-3">Previous Project</a>
+        <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

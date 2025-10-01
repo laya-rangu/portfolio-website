@@ -1,0 +1,360 @@
+/* --- Global Styles (Matchstick/School House White Palette) --- */
+
+/* Use a professional, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+    /* Primary Color Set (Matchstick/Warm Beige Accent) */
+    --color-primary: #D8C5A4; /* Deeper Matchstick/Warm Beige (Main Accent) */
+    --color-secondary: #938D81; /* Deeper School House White/Muted Taupe (Dark Text/Navbar) */
+    
+    /* Background & Surface Colors */
+    --color-background: #FBFBF7; /* All White/Very Light Base */
+    --color-card: #FFFFFF; /* True White */
+    
+    /* Alternating Card Colors for Differentiation (Subtle Contrast) */
+    --color-alternate-card-1: #FFFFFF; /* White */
+    --color-alternate-card-2: #F4F1E8; /* Wimborne White/Light Hover (for subtle differentiation) */
+    --color-alternate-card-3: #ECEAEA; /* Very Light Gray/Taupe */
+    
+    /* Supporting Colors */
+    --color-text-dark: #333333; /* Standard Text */
+    --color-text-light: #FFFFFF; /* White text on dark elements */
+    --color-light-gray: #E8E8E8; /* Light borders/Dividers */
+    --color-hover-accent: #EFEBE5; /* Very Light Beige/Wimborne White shade for hover */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    margin-top: 56px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: var(--color-secondary) !important; /* Muted Taupe for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: var(--color-card) !important; /* White text on dark nav */
+    font-weight: 700;
+    font-size: 1.6rem !important;
+}
+
+.nav-link {
+    color: var(--color-alternate-card-3) !important; /* Light Gray text on dark nav */
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 0.375rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-primary) !important; /* Matchstick highlight */
+    background-color: transparent !important;
+}
+
+/* --- General Components (Cards, Buttons) --- */
+
+.card {
+    border: 1px solid var(--color-light-gray);
+    border-radius: 0.75rem; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
+    background-color: var(--color-card);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Applying distinct background colors for differentiation (Experience Page) */
+.experience-item-card:nth-child(1) { background-color: var(--color-alternate-card-1) !important; } /* White */
+.experience-item-card:nth-child(2) { background-color: var(--color-alternate-card-2) !important; } /* Light Beige/Cream */
+.experience-item-card:nth-child(3) { background-color: var(--color-alternate-card-3) !important; } /* Very Light Gray */
+.experience-item-card:nth-child(4) { background-color: var(--color-alternate-card-2) !important; } /* Light Beige/Cream */
+.experience-item-card:nth-child(5) { background-color: var(--color-alternate-card-1) !important; } /* White */
+
+
+/* The primary/project case study cards will still use nth-child(even/odd) for subtle differentiation */
+.case-study-section .card:nth-child(odd) { background-color: var(--color-alternate-card-1); }
+.case-study-section .card:nth-child(even) { background-color: var(--color-alternate-card-2); }
+
+
+h1, h2, h3, h4 {
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Primary Button (Matchstick Accent) */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-dark); /* Dark text on light button */
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.btn-primary:hover {
+    background-color: #BBAA8F; /* Slightly darker primary on hover */
+    border-color: #BBAA8F;
+    transform: translateY(-1px);
+    color: var(--color-text-dark);
+}
+
+/* Outline Button for Projects */
+.btn-outline-primary {
+    color: var(--color-primary); 
+    border: 2px solid var(--color-primary); 
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark); /* Dark text on primary hover */
+}
+
+/* Secondary Button (Muted Taupe) */
+.btn-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-card); /* White text on dark button */
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.5rem;
+}
+.btn-secondary:hover {
+    background-color: #A9A399; /* Slightly lighter Taupe */
+    border-color: #A9A399;
+}
+
+
+/* --- Homepage Specific Styles --- */
+#home .card {
+    background-color: var(--color-card);
+    padding: 4rem;
+    box-shadow: none;
+    border: none;
+}
+#home .intro-text h2 {
+    font-size: 2.8rem;
+    color: var(--color-primary); 
+}
+
+/* Project Cards on Index Page */
+#projects .project-item {
+    /* Maintain the visual separation */
+    border-bottom: 1px solid var(--color-light-gray);
+    padding: 3rem 0;
+    margin-bottom: 0;
+    /* Remove the 'wow' feature from the main row item */
+    transition: none;
+}
+
+#projects .project-item:last-child {
+    border-bottom: none;
+}
+
+/* New Image Container for the 'Wow Feature' */
+#projects .project-image-container {
+    overflow: hidden; /* Clips the image zoom effect */
+    border-radius: 0.5rem;
+    /* Add a subtle lift to the image container on hover to make it feel responsive */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+#projects .project-image-container:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+
+#projects img {
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease-out; /* Smooth image zoom */
+    width: 100%;
+    display: block;
+}
+
+/* The WOW Feature: Zooms the image slightly on hover of its container */
+#projects .project-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Contact & CTA Styles (Used on Contact page and Index Footer CTA) */
+.contact-cta {
+    background-color: var(--color-alternate-card-2); /* Light Beige background */
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-light-gray);
+}
+.contact-cta .card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-card); /* White card */
+    border: none;
+    padding: 1.5rem;
+}
+
+.contact-link-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-light-gray);
+    padding: 2rem;
+    display: block;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: var(--color-secondary);
+    height: 100%;
+}
+
+.contact-link-card:hover {
+    background-color: var(--color-hover-accent); /* VERY LIGHT COLOR FOR HOVER */
+    color: var(--color-secondary); /* Dark text on light hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.contact-link-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.contact-link-card:hover i {
+    color: var(--color-secondary);
+}
+
+
+/* --- Project Case Study Page Styles --- */
+.case-study-page {
+    background-color: var(--color-card);
+    max-width: 1200px;
+    margin: 5rem auto 3rem;
+    padding: 0;
+    border-radius: 0.75rem; /* Increased radius for case study container */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-header {
+    background-color: var(--color-secondary); /* Muted Taupe header */
+    color: var(--color-text-light);
+    padding: 4rem 3rem 2rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.case-study-header h1 {
+    color: var(--color-primary); /* Matchstick accent on dark background */
+    font-size: 2.5rem;
+}
+
+.case-study-section {
+    padding: 3rem 3rem;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.section-title {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-left: 5px solid var(--color-primary);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    display: inline-block; 
+}
+
+/* Enhanced Lists */
+.list-point {
+    position: relative;
+    padding-left: 25px;
+}
+.list-point::before {
+    content: "•";
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+/* --- Experience Page Specific Styles --- */
+.experience-item-card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Lighter shadow for differentiation */
+}
+
+
+/* Alternating title/description layout style */
+.experience-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.experience-title-org, .experience-description {
+    padding: 1rem; 
+    border-radius: 0.5rem;
+    flex: 1;
+}
+
+.experience-title-org h4 {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.experience-title-org h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust for alternating content order (Right aligned title/org) */
+.content-right-aligned .experience-title-org {
+    order: 2;
+}
+.content-right-aligned .experience-description {
+    order: 1;
+}
+
+@media (max-width: 992px) {
+    .experience-content {
+        flex-direction: column;
+    }
+    /* Reset order for mobile */
+    .content-right-aligned .experience-title-org {
+        order: unset;
+    }
+    .content-right-aligned .experience-description {
+        order: unset;
+    }
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-text-light) !important;
+    padding: 2rem 0;
+    margin-top: 5rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-study-header, .case-study-section {
+        padding: 2rem 1rem;
+    }
+    #home .card {
+        padding: 2rem 1rem;
+    }
+}

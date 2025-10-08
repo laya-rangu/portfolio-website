@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Study | Image Colorization</title>
+  <meta name="description" content="An engineering solution using deep learning, Caffe models, and OpenCV to transform grayscale images into photorealistic color using the LAB color space.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
     <div class="container">
       <a class="navbar-brand" href="index.html">Laya Rangu</a>
@@ -51,7 +51,7 @@
 
     <section class="case-study-section" id="labspace">
       <h2 class="section-title">Proposed Work: LAB Color Space and Neural Inference</h2>
-      <p>The core technical solution lies in utilizing the LAB color space, which is perceptually uniform and isolates luminosity from color information. This greatly simplifies the model's prediction task.</p>
+      <p>The core technical solution lies in utilizing the **LAB color space**, which is perceptually uniform and isolates luminosity from color information. This greatly simplifies the model's prediction task. </p>
       <ul class="list-unstyled">
         <li class="list-point">LAB Color Space Transformation: The input grayscale image is used directly as the Luminance (L) channel. The deep learning model is exclusively trained to predict the Chrominance (A and B) layers.</li>
         <li class="list-point">Deep Learning Model: The solution leverages a pre-trained colorization network based on the Caffe framework and executed via Python and OpenCV's deep learning module.</li>
@@ -77,7 +77,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="text-white text-center">
     <div class="container">
       <p class="mb-0">&copy; 2025 Laya Rangu | All Rights Reserved</p>
